@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.bg-top {
+    /* background-color: #333; */
+    /* color: #fff; */
+}
+
+.my {
+    margin: 8rem 0;
+}
+
+.mb {
+    margin-bottom: 5rem;
+}
+
+.mt {
+    margin-top: 10rem;
+}
+
+.navbar .nav-link.active, .navbar .show>.nav-link{
+    color: #FF5B1E !important;
+    font-weight: bold;
+}
+
+.logo {
+    color: #FF5B1E;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: #FF5B1E !important;
+}
+
+.navbar {
+    color: #333;
+}
+
+.btn-modal {
+    background-color: #FF5B1E !important;
+    color: #fff !important;
+}
+
+.card-title span {
+    background-color: #FF5B1E;
+    margin-left: 1rem;
+}
+
+.group-item img {
+    filter: brightness(0.5);
+}
+
+.btn-more {
+    background-color: #FF5B1E !important;
+    color: white !important;
+}
+
+#accordion .card-header {
+    background-color: #333;
+}
+
+.modal {
+    z-index: 999;
+}
+
+.modal-body input {
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.modal-footer .btn {
+    background-color: #FF5B1E;
+}
+
+.progress {
+    background-color: #333 !important;
+}
+
+.progress-bar {
+    background-color: #FF5B1E !important;
+}
+
+.mention textarea {
+    outline: none;
+}
+
+#header_sub {
+    margin-top: 4.5rem;
+}
+
+#danhmuc h2 a:hover {
+    color: #FF5B1E !important;
+}
+
+#danhmuc ul li a:hover {
+    color: #FF5B1E !important;
+}
