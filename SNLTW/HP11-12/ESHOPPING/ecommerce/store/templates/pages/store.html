@@ -1,0 +1,40 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+    <div class = 'container'>
+        <div class = 'row'>
+        {% for product in products %}    
+            <div class = 'col-md-4 col-lg-4'>
+            <div class="card" style="width: 18rem;">
+                <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">{{product.name}}</h3>
+                    <h4 class="card-text">${{product.price}}</h4>
+                    <button data-product = {{product.id}} data-action ="add" class="btn btn-outline-secondary add-btn addtocart" >
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
+<div class="pagination">
+    <span class="step-links">
+        {% if products.has_previous %}
+            <a href="?page={{ products.previous_page_number }}">Previous</a>
+        {% endif %}
+    </span>
+  
+    <span class="current">
+        Page {{ products.number }} of {{ products.paginator.num_pages }}.
+    </span>
+  
+    <span>
+        {% if products.has_next %}
+            <a href="?page={{ products.next_page_number }}">Next</a>
+        {% endif %}
+    </span>
+  </div>

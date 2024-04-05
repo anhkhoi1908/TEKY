@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js"></script>
+</head>
+<body>
+
+    <!-- Bài tập 1: Xây dựng chương trình có một ô input, một button. Chương trình cho phép người dùng nhập vào 1 số bất kì. Khi 
+    click vào button thì in các số từ 1 tới giá trị của ô input vừa nhập.--> 
+
+    <br><br><br>
+
+    <script language="javascript">
+        function print_number()
+        {
+            // Lấy number
+            var number = document.getElementById("number").value;
+
+            // Ép number sang kiểu INT
+            number = parseInt(number);
+
+            // Lặp để in kết quả
+            var html = '';
+            for (var i = 1; i <= number; i++){
+                html += i + '<br/>';
+                // if (number % i == 0) {
+                //     html += i + '<br/>';
+                // }
+            }
+            document.getElementById("result").innerHTML = html;
+        }
+    </script>
+
+    <form method="get" action="">Nhập số:
+        <input type="text" id="number" value="0"/>
+        <input type="button" value="In kết quả" onclick="print_number()"/>
+    </form>
+    <div id="result"></div>
+
+    <br><br><br>
+
+    
+    <!-- Bài tập 2: Xây dựng chương trình có một ô input, một button. Chương trình cho phép người dùng nhập vào 1 số bất kì. Khi 
+    click vào button thì in các SỐ NGUYÊN TỐ từ 1 tới giá trị của ô input vừa nhập.--> 
+
+    
+    <!-- Bài tập 3: Cho 10 thẻ div, hãy viết chương trình khi click vào button thì sẽ đổi màu cho các thẻ div. Nếu div nào vị trí
+    chẵn thì background màu đỏ và lẻ thì background màu xanh.--> 
+
+    <script language="javascript">
+        function change_backgroud()
+        {
+            var divs = document.getElementsByClassName("element");
+            for (var i = 0; i < divs.length; i++) {
+                // Vị trí chẵn => màu đỏ
+                if ((i + 1) % 2 == 0) {
+                    divs[i].style.background = "red";
+                } else { 
+                    // Vị trí lẽ => màu xanh
+                    divs[i].style.background = "blue";
+                }
+            }
+        }
+    </script>
+
+    <div class="element">Thẻ thứ 1</div>
+    <div class="element">Thẻ thứ 1</div>
+    <div class="element">Thệ thứ 1</div>
+    <div class="element">Thẻ thứ 1</div>
+    <div class="element">Thẻ thứ 1</div>
+    <div class="element">Thệ thứ 1</div>
+    <div class="element">Thẻ thứ 1</div>
+    <div class="element">Thệ thứ 1</div>
+    <div class="element">Thẻ thứ 1</div>
+    <div class="element">Thẻ thứ 1</div>
+    <button onclick="change_backgroud ()">Change background</button>
+
+</body>
+</html>
